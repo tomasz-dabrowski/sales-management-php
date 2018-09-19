@@ -1,0 +1,128 @@
+.sidebar .nav-item .nav-link.active {
+    color: #fff !important;
+}
+.sidebar .nav-item .nav-link.active i {
+    color:#007bff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+.navbar-dark .navbar-nav .nav-link i {
+     color:#007bff;
+ }
+
+.sidebar .nav-item .nav-link {
+     color: #cccccc;
+}
+.sidebar .nav-item .nav-link:hover {
+    color: #ffffff;
+}
+#sidebarToggle i {
+    color:#007bff;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff !important;
+}
+.btn-outline-danger:hover {
+    color: #fff !important;
+}
+
+.btn-file {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.file-drop-zone {
+    margin: 10px;
+    padding: 0;
+    border: none !important;
+    border-radius: 0 !important;
+}
+.file-drop-zone-title {
+    padding: 15px 10px;
+}
+.krajee-default.file-preview-frame .file-thumbnail-footer {
+    height: 10px !important;
+}
+.krajee-default .file-drag-handle, .krajee-default .file-upload-indicator {
+    display: none;
+    height: 0 !important;
+}
+.krajee-default.file-preview-frame .kv-file-content {
+    width: 100%;
+    height: 100% !important;
+}
+.krajee-default.file-preview-frame {
+    margin: 0 !important;
+}
+.krajee-default .file-footer-caption {
+    margin-bottom: 0 !important;
+}
+
+h3 i {
+    color:#007bff;
+}
+
+h4.modal-title i {
+    color:#007bff;
+}
+
+button.button1:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div.card {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.cardHeader {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+}
+
+div.cardContainer {
+    padding: 10px;
+}
+
+
+.div-hide {
+	display: none;
+}
+
+/* file input */
+.kv-file-zoom {
+	display: none;
+}
+
+div.kv-avatar div.file-input div.file-preview {
+	width: 200px;
+}
+
+/*login form*/
+.vertical {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e6f5ff !important;
+}
+
+/*.table td, .table th, .form-control {*/
+    /*vertical-align: middle;*/
+/*}*/
+
+.form-group {
+    margin-bottom: 0.3rem;
+}
+
+.text-danger {
+    margin-bottom: 0.5rem;
+}
+
