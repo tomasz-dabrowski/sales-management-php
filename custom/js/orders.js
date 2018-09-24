@@ -405,21 +405,6 @@ function getProductData(row = null) {
 			$("#quantity"+row).val("");						
 			$("#total"+row).val("");
 
-			// remove check if product name is selected
-			// var tableProductLength = $("#productTable tbody tr").length;			
-			// for(x = 0; x < tableProductLength; x++) {
-			// 	var tr = $("#productTable tbody tr")[x];
-			// 	var count = $(tr).attr('id');
-			// 	count = count.substring(3);
-
-			// 	var productValue = $("#productName"+row).val()
-
-			// 	if($("#productName"+count).val() == "") {					
-			// 		$("#productName"+count).find("#changeProduct"+productId).removeClass('div-hide');	
-			// 		console.log("#changeProduct"+count);
-			// 	}											
-			// } // /for
-
 		} else {
 			$.ajax({
 				url: 'controller/fetchSelectedProduct.php',
@@ -438,23 +423,7 @@ function getProductData(row = null) {
 					total = total.toFixed(2);
 					$("#total"+row).val(total);
 					$("#totalValue"+row).val(total);
-					
-					// check if product name is selected
-					// var tableProductLength = $("#productTable tbody tr").length;					
-					// for(x = 0; x < tableProductLength; x++) {
-					// 	var tr = $("#productTable tbody tr")[x];
-					// 	var count = $(tr).attr('id');
-					// 	count = count.substring(3);
 
-					// 	var productValue = $("#productName"+row).val()
-
-					// 	if($("#productName"+count).val() != productValue) {
-					// 		// $("#productName"+count+" #changeProduct"+count).addClass('div-hide');	
-					// 		$("#productName"+count).find("#changeProduct"+productId).addClass('div-hide');								
-					// 		console.log("#changeProduct"+count);
-					// 	}
-					// } // /for
-			
 					subAmount();
 				} // /success
 			}); // /ajax function to fetch the product data	
@@ -511,7 +480,6 @@ function subAmount() {
 
 } // /sub total amount
 
-
 function resetOrderForm() {
 	// reset the input field
 	$("#createOrderForm")[0].reset();
@@ -522,7 +490,7 @@ function resetOrderForm() {
 } // /reset order form
 
 
-// remove order from server
+// remove order from db
 function removeOrder(orderId = null) {
 	if(orderId) {
 		$("#removeOrderBtn").unbind('click').bind('click', function() {
@@ -546,19 +514,19 @@ function removeOrder(orderId = null) {
 	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+ response.messages +
 	          '</div>');
 
-						// remove the mesages
-	          $(".alert-success").delay(500).show(10, function() {
-							$(this).delay(3000).hide(10, function() {
-								$(this).remove();
-							});
-						}); // /.alert	          
+                // remove the mesages
+                $(".alert-success").delay(500).show(10, function() {
+                        $(this).delay(3000).hide(10, function() {
+                            $(this).remove();
+                        });
+                    }); // /.alert
 
-					} else {
-						// error messages
-						$(".removeOrderMessages").html('<div class="alert alert-warning">'+
-	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-	            '<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
-	          '</div>');
+                } else {
+                    // error messages
+                    $(".removeOrderMessages").html('<div class="alert alert-warning">'+
+                '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+                '<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
+                '</div>');
 
 						// remove the mesages
 	          $(".alert-success").delay(500).show(10, function() {
