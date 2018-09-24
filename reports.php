@@ -27,9 +27,6 @@ include_once 'includes/navbar.php';
                             <div class="col-md-6">
                                 <h3><i class="fas fa-fw fa-chart-bar"></i> Generate Report</h3>
                             </div>
-                            <div class="col-md-6" >
-                                <button class="btn btn-primary float-right button1" data-toggle="modal" id="addCustomersModalBtn" data-target="#addCustomersModal"> <i class="fas fa-plus-circle"></i> Add Customer </button>
-                            </div>
                         </div> <!-- row -->
 
                         <p><br /></p>
@@ -37,42 +34,35 @@ include_once 'includes/navbar.php';
                         <div class="panel-body">
 
                             <form class="form-horizontal" action="controller/getOrderReport.php" method="post" id="getOrderReportForm">
-
                                 <div class="row">
-                                    <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="startDate" class="col-sm-2 control-label">Start Date</label>
-                                    <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" />
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="startDate" class="control-label">Start Date:</label>
+                                            <input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" />
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="endDate" class="control-label">End Date</label>
+                                            <input type="date" class="form-control" id="endDate" name="endDate" placeholder="End Date" />
+                                        </div>
                                     </div>
+                                </div> <!-- /row -->
 
-                                    <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="endDate" class="col-sm-2 control-label">End Date</label>
-                                    <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="endDate" name="endDate" placeholder="End Date" />
-                                    </div>
-                                </div>
-                                    </div>
-                                </div>
+                                <br />
 
                                 <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-success" id="generateReportBtn"> <i class="glyphicon glyphicon-ok-sign"></i> Generate Report</button>
-                                    </div>
+                                    <button type="submit" class="btn btn-primary button1" id="generateReportBtn"> <i class="fas fa-plus-circle"></i> Generate Report </button>
                                 </div>
                             </form>
 
-                        </div>
+                        </div> <!-- /panel-body -->
 
                     </div> <!-- /panel -->
                 </div> <!-- /col-md-12 -->
             </div> <!-- /row -->
         <p><br /></p>
         </div>
-        <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
         <footer class="sticky-footer">
