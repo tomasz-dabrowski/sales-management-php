@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('#navReports').addClass('active');
+
 	$("#getOrderReportForm").unbind('submit').bind('submit', function() {
 		
 		var startDate = $("#startDate").val();
@@ -34,7 +36,20 @@ $(document).ready(function() {
 				dataType: 'text',
 				success:function(response) {
 					var mywindow = window.open('', 'Sales Management System', 'height=400,width=600');
-	        mywindow.document.write('<html><head><title>Order Report</title>');
+	        mywindow.document.write('<html><head><title>Orders Report</title>');
+			mywindow.document.write('<style>\n' +
+				'body {\n' +
+				'    font-family: arial, sans-serif;\n' +
+				'    width: 98%;\n' +
+				'}\n' +
+				'\n' +
+				'.table td, .table th {\n' +
+				'    border: 1px solid #cccccc;\n' +
+				'    text-align: center;\n' +
+				'    padding: 4px 0;\n' +
+				'}\n' +
+				'\n' +
+				'</style>');
 	        mywindow.document.write('</head><body>');
 	        mywindow.document.write(response);
 	        mywindow.document.write('</body></html>');

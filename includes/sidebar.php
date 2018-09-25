@@ -31,9 +31,8 @@
             <i class="fas fa-shopping-cart fa-fw"></i>
             <span>Orders</span></a>
     </li>
-
-    <li id="navReports" class="nav-item">
-        <a class="nav-link" href="reports.php">
+    <li class="nav-item">
+        <a id="navReports" class="nav-link" href="reports.php">
             <i class="fas fa-chart-bar fa-fw"></i>
             <span>Reports</span></a>
     </li>

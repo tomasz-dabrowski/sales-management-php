@@ -123,7 +123,6 @@ $printInvoice = '
 
     <h3>Total amount: '.$orderTotalAmount.' <br />
     Payment type: '.$paymentType.' <br />
-    Date of payment: .................
     </h3>	
     
     <table style="width:100%; font-size: 12px; padding-top: 100px;">
