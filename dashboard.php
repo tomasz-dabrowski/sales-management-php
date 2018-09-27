@@ -1,98 +1,14 @@
 <?php
 require_once 'controller/core.php';
 include_once 'models/dashboard.php';
+include_once 'includes/head.php';
+include_once 'includes/navbar.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sales Management - Dashboard</title>
-
-    <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="scripts/sb-admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="scripts/sb-admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-    <link href="scripts/sb-admin/css/sb-admin.css" rel="stylesheet">
-</head>
-
 <body id="page-top">
-
-<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
-    <a id="navDashboard" class="navbar-brand mr-1" href="index.php"> Menu</a>
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-6 float-right">
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="report.php" id="navReport">
-                <i class="fas fa-chart-bar"></i> Reports
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user-circle fa-fw"></i> User
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" id="navSetting">
-                <a id="topNavSetting" class="dropdown-item" href="setting.php">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a id="topNavLogout" class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">Logout</a>
-            </div>
-        </li>
-    </ul>
-
-</nav>
-
 <div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="dashboard.php">
-                <i class="fas fa-fw fa-home"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a id="navBrand" class="nav-link" href="producers.php">
-                <i class="fas fa-fw fa-cogs"></i>
-                <span>Producers</span></a>
-        </li>
-        <li class="nav-item">
-            <a id="navCategories" class="nav-link" href="categories.php">
-                <i class="fas fa-fw fa-th-list"></i>
-                <span>Categories</span></a>
-        </li>
-        <li class="nav-item">
-            <a id="navProduct" class="nav-link" href="products.php">
-                <i class="fas fa-fw fa-list-alt"></i>
-                <span>Products</span></a>
-        </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-shopping-cart fa-fw"></i>
-                <span>Orders</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a id="topNavAddOrder" class="dropdown-item" href="orders.php?o=add">Add Order</a>
-                <a id="topNavManageOrder" class="dropdown-item" href="orders.php?o=manage">Manage Orders</a>
-            </div>
-        </li>
-
-        <li id="navReport" class="nav-item">
-            <a class="nav-link" href="report.php">
-                <i class="fas fa-chart-bar fa-fw"></i>
-                <span>Reports</span></a>
-        </li>
-    </ul>
+    <?php include_once 'includes/sidebar.php'; ?>
 
     <div id="content-wrapper">
 
@@ -195,10 +111,11 @@ include_once 'models/dashboard.php';
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
+        <!-- Sticky Footer -->
         <footer class="sticky-footer">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright © Tomasz Dąbrowski <?php echo date('Y'); ?></span>
+                    <span>Copyright © <?php echo date('Y'); ?> </span><span class="text-primary">Sales Management System</span>
                 </div>
             </div>
         </footer>

@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#navDashboard').addClass('active')
+    $('#navDashboard').addClass('active');
 });
