@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	// main menu
-	$("#navSetting").addClass('active');
-	// sub manin
-	$("#topNavSetting").addClass('active');
 
 	// change username
 	$("#changeUsernameForm").unbind('submit').bind('submit', function() {
@@ -37,26 +33,26 @@ $(document).ready(function() {
 																
 						// shows a successful message after operation
 						$('.changeUsenrameMessages').html('<div class="alert alert-success">'+
-	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-	            '<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
-	          '</div>');
+						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+						'<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
+						'</div>');
 
 						// remove the mesages
-	          $(".alert-success").delay(500).show(10, function() {
+						$(".alert-success").delay(500).show(10, function() {
 							$(this).delay(3000).hide(10, function() {
 								$(this).remove();
 							});
-						}); // /.alert	          					
+						}); // /.alert
 						
 					} else {
 						// shows a successful message after operation
 						$('.changeUsenrameMessages').html('<div class="alert alert-warning">'+
-	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-	            '<strong><i class="glyphicon glyphicon-exclamation-sign"></i></strong> '+ response.messages +
-	          '</div>');
+						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+						'<strong><i class="glyphicon glyphicon-exclamation-sign"></i></strong> '+ response.messages +
+					  	'</div>');
 
 						// remove the mesages
-	          $(".alert-warning").delay(500).show(10, function() {
+	          			$(".alert-warning").delay(500).show(10, function() {
 							$(this).delay(3000).hide(10, function() {
 								$(this).remove();
 							});
@@ -65,7 +61,6 @@ $(document).ready(function() {
 				} // /success 
 			}); // /ajax
 		}
-			
 		return false;
 	});
 
@@ -79,7 +74,7 @@ $(document).ready(function() {
 		var newPassword = $("#npassword").val();
 		var conformPassword = $("#cpassword").val();
 
-		if(currentPassword == "" || newPassword == "" || conformPassword == "") {
+		if (currentPassword == "" || newPassword == "" || conformPassword == "") {
 			if(currentPassword == "") {
 				$("#password").after('<p class="text-danger">The Current Password field is required</p>');
 				$("#password").closest('.form-group').addClass('has-error');
@@ -103,7 +98,9 @@ $(document).ready(function() {
 				$("#cpassword").closest('.form-group').removeClass('has-error');
 				$(".text-danger").remove();
 			}
+
 		} else {
+
 			$(".form-group").removeClass('has-error');
 			$(".text-danger").remove();
 
@@ -114,27 +111,29 @@ $(document).ready(function() {
 				dataType: 'json',
 				success:function(response) {
 					console.log(response);
+
 					if(response.success == true) {
 						$('.changePasswordMessages').html('<div class="alert alert-success">'+
-	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-	            '<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
-	          '</div>');
+                        '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+                        '<strong><i class="glyphicon glyphicon-ok-sign"></i></strong> '+ response.messages +
+                        '</div>');
 
 						// remove the mesages
-	          $(".alert-success").delay(500).show(10, function() {
+                        $(".alert-success").delay(500).show(10, function() {
 							$(this).delay(3000).hide(10, function() {
-								$(this).remove();
+							    $(this).remove();
 							});
-						}); // /.alert	    
+						}); // /.alert
+
 					} else {
 
 						$('.changePasswordMessages').html('<div class="alert alert-warning">'+
-	            '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-	            '<strong><i class="glyphicon glyphicon-exclamation-sign"></i></strong> '+ response.messages +
-	          '</div>');
+                        '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+                        '<strong><i class="glyphicon glyphicon-exclamation-sign"></i></strong> '+ response.messages +
+                        '</div>');
 
 						// remove the mesages
-	          $(".alert-warning").delay(500).show(10, function() {
+	                    $(".alert-warning").delay(500).show(10, function() {
 							$(this).delay(3000).hide(10, function() {
 								$(this).remove();
 							});
@@ -144,7 +143,6 @@ $(document).ready(function() {
 			}); // /ajax function
 
 		} // /else
-
 
 		return false;
 	});
