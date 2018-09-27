@@ -1,6 +1,6 @@
 <?php
 require_once 'controller/db_connect.php';
-include_once 'models/index.php';
+include_once 'includes/index.php';
 ?>
 
 <!DOCTYPE html>
