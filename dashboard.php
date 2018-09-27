@@ -1,6 +1,6 @@
 <?php
 require_once 'controller/core.php';
-include_once 'models/dashboard.php';
+include_once 'includes/dashboard.php';
 include_once 'includes/head.php';
 include_once 'includes/navbar.php';
 ?>
