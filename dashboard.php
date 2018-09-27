@@ -31,10 +31,10 @@ include_once 'includes/navbar.php';
                                 <i class="fas fa-fw fa-chart-bar"></i>
                             </div>
                             <div class="mr-5">Total sales net.:
-                                <br /> <strong><?php echo $totalSales ?> pln</strong>
+                                <br /><strong><?php echo $totalSales ?> pln</strong>
                             </div>
                         </div>
-                        <a class="card-footer text-white clearfix small z-1" href="report.php">
+                        <a class="card-footer text-white clearfix small z-1" href="reports.php">
                             <span class="float-left">View Details</span>
                             <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -49,9 +49,9 @@ include_once 'includes/navbar.php';
                                 <i class="fas fa-fw fa-shopping-cart"></i>
                             </div>
                             <div class="mr-5">Number of orders:
-                                <br /> <strong><?php echo $countOrder ?> orders</strong></div>
+                                <br /><strong><?php echo $countOrder ?> orders</strong></div>
                         </div>
-                        <a class="card-footer text-white clearfix small z-1" href="orders.php?o=manage">
+                        <a class="card-footer text-white clearfix small z-1" href="orders.php?order=manage">
                             <span class="float-left">View Details</span>
                             <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -66,9 +66,9 @@ include_once 'includes/navbar.php';
                                 <i class="fas fa-fw fa-list-alt"></i>
                             </div>
                             <div class="mr-5">Active products:
-                                <br /> <strong><?php echo $countProduct ?> products</strong></div>
+                                <br /><strong><?php echo $countProduct ?> products</strong></div>
                         </div>
-                        <a class="card-footer text-white clearfix small z-1" href="product.php">
+                        <a class="card-footer text-white clearfix small z-1" href="products.php">
                             <span class="float-left">View Details</span>
                             <span class="float-right">
                     <i class="fas fa-angle-right"></i>
