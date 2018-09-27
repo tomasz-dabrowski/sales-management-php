@@ -76,7 +76,7 @@ button.button1:hover {
 div.card {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  /*text-align: center;*/
 }
 
 div.cardHeader {
@@ -113,10 +113,6 @@ div.kv-avatar div.file-input div.file-preview {
 .form-control:disabled, .form-control[readonly] {
     background-color: #e6f5ff !important;
 }
-
-/*.table td, .table th, .form-control {*/
-    /*vertical-align: middle;*/
-/*}*/
 
 .form-group {
     margin-bottom: 0.3rem;
